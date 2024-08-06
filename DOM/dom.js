@@ -65,9 +65,58 @@ myDiv.innerText = "Hello World"
 // Call the remove() method on your img element to remove it from the page
 
 
-let myButton = document.querySelector("#myButton")
-myButton.addEventListener("click", function(){
-    alert("using addEventListener")
-})
 
-//hi Mo this is a change
+
+  //declare function 
+  function sayHello(){
+    //whatever code your function will run 
+    alert("Hello world!")
+  }
+
+  //call the function 
+//   sayHello();
+
+
+
+  //parameters 
+  function add2nums(a, b){
+    alert(a+b)
+  }
+
+  //pass in different numbers each time the function is called 
+//   add2nums(2, 3)
+//   add2nums(10, 2)
+
+//addeventlistener
+
+//select the button element 
+let myButton = document.querySelector("button")
+
+//declared event handler function 
+function handleClick(){
+    alert('button was clicked')
+}
+
+//use addEventListener to run the handleClick function when the button is clicked
+myButton.addEventListener('click', handleClick)
+//we are listening for the click event, when it happens, run the handleClick function 
+
+
+//random color exercise
+
+//select random color button 
+let colorButton = document.querySelector("#random-color")
+
+//declare event handler function 
+function randomColor(){
+    //255 is the max number 
+    let randomR = Math.floor(Math.random() * 255 )
+    let randomB = Math.floor(Math.random() * 255 )
+    let randomG = Math.floor(Math.random() * 255 )
+
+    //select the body element
+    //change the background color 
+    document.body.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
+}
+
+colorButton.addEventListener("click", randomColor)
