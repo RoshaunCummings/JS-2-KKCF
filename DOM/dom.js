@@ -120,3 +120,45 @@ function randomColor(){
 }
 
 colorButton.addEventListener("click", randomColor)
+
+
+
+
+//review 8/7
+
+
+//selecting an HTML element using the DOM
+//selecting the h1 with the id title
+//document.querySelector("h1") //select by the element type
+
+let title - document.querySelector("#title") //select the element with id title
+
+//manipulate the title element
+title.innerText - "Hello stranger" //change the text content
+
+
+//change a css property of the h1 title element
+//title.style.color = "red"
+
+////title.style.cssText = "font-size: 100px; color: red;"
+
+function changestyle(){
+  title.style.cssText = "font-size: 100px; color: red;"
+}
+
+//when the user hover over the title element, run the changestyle function
+title.addEventListener("mouseover", bigRedText)
+title.addEventListener("mouseout", normalText)
+
+function normalText(){
+  title.style.cssText - "font-size: 30px; color: white;"
+}
+
+let word = "sparkling";
+let numericValue = 10;
+let calculatedValue = numericValue * 5; 
+let trueOrFalse = true;
+let userEnteredValue = prompt("Blue")
+
+let story = 'In a (sparkling) + meadow, there were (10) + unicorns prancing graccefully. Each unicorn had (5) + magical horns. Its (true) + that they could fly'
+
